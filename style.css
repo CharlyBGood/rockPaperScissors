@@ -11,9 +11,9 @@ body {
 }
 
 
-p {
+h1 {
     text-align: center;
-    margin: 4em auto;
+    margin: 2em auto;
 }
 
 .play {
@@ -27,4 +27,5 @@ p {
     color: #999393;
     padding: .4em 1.2em;
     border-radius: .3em;
+    cursor: pointer;
 }
