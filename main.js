@@ -7,6 +7,8 @@ const playArr = [R, P, S];
 let plyrRes = document.getElementById("player_result");
 let compRes = document.getElementById("comp_result");
 
+
+
 let spanBtns = document.getElementsByTagName("span");
 
 const GAME = () => {
@@ -23,3 +25,4 @@ for (let i = 0; i < spanBtns.length; i++) {
     GAME();
   });
 }
+
