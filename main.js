@@ -7,7 +7,7 @@ const playArr = [R, P, S];
 let plyrRes = document.getElementById("player_result");
 let compRes = document.getElementById("comp_result");
 
-let buttons = document.querySelector(".buttons");
+let spanBtns = document.getElementsByTagName("span");
 
 const GAME = () => {
   for (let i = 0; i < playArr.length; i++) {
@@ -17,8 +17,9 @@ const GAME = () => {
   }
 };
 
-buttons.addEventListener("click", GAME);
-
-buttons.addEventListener("click", (e) => {
-  plyrRes.innerHTML = e.target.innerHTML;
-});
+for (let i = 0; i < spanBtns.length; i++) {
+  spanBtns[i].addEventListener("click", () => {
+    plyrRes.innerHTML = spanBtns[i].innerHTML;
+    GAME();
+  });
+}
