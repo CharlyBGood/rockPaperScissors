@@ -1,16 +1,18 @@
-const playArr = ["Rock", "Paper", "Scissor"];
+// const playArr = ["Rock", "Paper", "Scissor"];
+const R = `<i class="fa-regular fa-hand-back-fist fa-2x"></i>`;
+const P = `<i class="fa-regular fa-hand fa-2x"></i>`;
+const S = `<i class="fa-regular fa-hand-scissors fa-2x"></i>`;
+
+const playArr = [R, P, S];
 let plyrRes = document.getElementById("player_result");
 let compRes = document.getElementById("comp_result");
-let rock = document.getElementById("rock");
-let paper = document.getElementById("paper");
-let scissor = document.getElementById("scissor");
+
 let buttons = document.querySelector(".buttons");
 
 const GAME = () => {
   for (let i = 0; i < playArr.length; i++) {
     let n = Math.floor(Math.random(playArr[i]) * playArr.length);
     compRes.innerHTML = playArr[n];
-    console.log(buttons.firstChild);
     return playArr[n];
   }
 };
@@ -18,5 +20,5 @@ const GAME = () => {
 buttons.addEventListener("click", GAME);
 
 buttons.addEventListener("click", (e) => {
-  plyrRes.innerHTML = e.target.innerText;
+  plyrRes.innerHTML = e.target.innerHTML;
 });
