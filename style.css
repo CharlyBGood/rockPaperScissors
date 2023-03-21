@@ -49,6 +49,7 @@ h1 {
   gap: 0.5em;
   width: 50%;
   margin: 0 auto;
+  z-index: 99;
 }
 
 .player svg {
