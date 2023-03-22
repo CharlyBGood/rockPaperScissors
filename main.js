@@ -96,9 +96,9 @@ spanBtns.forEach((spanBtn) =>
     roundNumber++;
     if (roundNumber > rounds) {
       if (userScore < computerScore) {
-        console.log("computer won!!");
+        alert("computer won!!");
       } else if (userScore > computerScore) {
-        console.log("you won!");
+        alert("you won!");
       }
       //  else if (userScore == computerScore) {
       //   alert("It's a tie!!")
